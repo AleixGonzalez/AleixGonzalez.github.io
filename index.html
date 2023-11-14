@@ -18,11 +18,26 @@
       color: #666;
     }
   </style>
+  <script>
+    function abrirVentanaEmergente() {
+      const ventanaEmergente = window.open('', '_blank', 'width=400,height=400');
+      ventanaEmergente.document.write(`
+        <html>
+        <head>
+          <title>Imagen</title>
+        </head>
+        <body style="margin: 0; display: flex; justify-content: center; align-items: center;">
+          <img src="https://via.placeholder.com/300" alt="Imagen de ejemplo" style="max-width: 100%; max-height: 100%;">
+        </body>
+        </html>
+      `);
+    }
+  </script>
 </head>
 <body>
   <h1>Bromitas</h1>
   <p>Bienvenido a la página de bromitas. ¡Diviértete!</p>
-  <!-- Aquí puedes añadir más contenido si lo deseas -->
+  <button onclick="abrirVentanaEmergente()">Abrir Ventana Emergente</button>
 </body>
 </html>
 
