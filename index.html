@@ -17,34 +17,31 @@
         }
     </style>
     <script>
-        window.addEventListener('load', function() {
+        document.addEventListener('DOMContentLoaded', function() {
             var generateButton = document.getElementById('generateButton');
             generateButton.addEventListener('click', function() {
+                generateButton.disabled = true; // Deshabilitar el botón después de hacer clic en él
                 var windowCount = 0;
                 var maxWindows = 100;
                 var interval = setInterval(function() {
                     if (windowCount >= maxWindows) {
                         clearInterval(interval);
+                        generateButton.disabled = false; // Habilitar el botón después de que se complete el bucle
                         return;
                     }
                     var newWindow = document.createElement('div');
                     newWindow.classList.add('window');
                     var image = document.createElement('img');
-                    image.src = 'https://i1.sndcdn.com/artworks-7oU1BTCyax574c8F-R7yQig-t500x500.jpg'; // Replace with the actual path to your image
+                    image.src = 'path/to/image.jpg'; // Reemplaza con la ruta real de tu imagen
                     newWindow.appendChild(image);
                     document.body.appendChild(newWindow);
                     windowCount++;
                 }, 100);
-                setTimeout(function() {
-                    clearInterval(interval);
-                }, 300000); // 5 minutes
             });
         });
     </script>
 </head>
 <body>
-    <h1>Bromitas</h1>
     <button id="generateButton">Entrar</button>
 </body>
 </html>
-
