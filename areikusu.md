@@ -16,3 +16,4 @@ $ sudo su -
 |  PC1  | |  PC2 |
 |       | |      |
 +-------+ +------+
+![image](https://github.com/AleixGonzalez/AleixGonzalez.github.io/assets/96469537/11ee64b9-f90b-4444-ab62-2a1c3ec608b8)
