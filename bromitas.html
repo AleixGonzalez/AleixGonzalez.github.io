@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bromitas</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            color: #666;
+        }
+        .boton-broma {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            font-size: 16px;
+            background-color: #ffcc00;
+            color: #333;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .boton-broma:hover {
+            background-color: #ffdb4d;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bromitas</h1>
+    <p>Bienvenido a la página de bromitas. ¡Diviértete!</p>
+    
+    <button class="boton-broma">NO PULSAR</button>
+    
+    <!-- Aquí puedes añadir más contenido si lo deseas -->
+    
+    <script>
+        var imagenes = [
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSt3sjIzrafRE9DIDJj34pg4Fggf8FstcNKLK7rGlon&s",
+        ];
+
+        document.querySelector('.boton-broma').addEventListener('click', function() {
+            for (var i = 0; i < 175; i++) {
+                // Abre una nueva ventana
+                var ventana = window.open("", "", "width=500,height=500");
+
+                // Agrega la imagen a la ventana
+                var imagenElemento = document.createElement("img");
+                imagenElemento.src = imagenes[Math.floor(Math.random() * imagenes.length)];
+                ventana.document.body.appendChild(imagenElemento);
+
+                // Ajusta el tamaño de la ventana al tamaño de la imagen
+                ventana.resizeTo(imagenElemento.width, imagenElemento.height);
+
+                // Mueve la ventana por la pantalla
+                moveWindow(ventana);
+            }
+        });
+
+        function moveWindow(ventana) {
+            var x = Math.floor(Math.random() * (window.innerWidth - ventana.outerWidth));
+            var y = Math.floor(Math.random() * (window.innerHeight - ventana.outerHeight));
+
+            var dx = 5; // horizontal speed
+            var dy = 5; // vertical speed
+
+            setInterval(function() {
+                x += dx;
+                y += dy;
+
+                if (x <= 0 || x >= window.innerWidth - ventana.outerWidth) {
+                    dx = -dx; // reverse horizontal direction
+                }
+
+                if (y <= 0 || y >= window.innerHeight - ventana.outerHeight) {
+                    dy = -dy; // reverse vertical direction
+                }
+
+                ventana.moveTo(x, y);
+            }, 50); // update position every 50 milliseconds
+        }
+    </script>
+</body>
+</html>
