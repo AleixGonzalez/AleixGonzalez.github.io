@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DownloaderByAreikusu</title>
+    <title>SpotyDownloader</title>
     <link rel="icon" href="https://static.vecteezy.com/system/resources/previews/016/716/458/non_2x/spotify-icon-free-png.png" type="image/png">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
@@ -13,6 +13,8 @@
             font-family: Arial, sans-serif;
             text-align: center;
             padding: 20px;
+            position: relative;
+            min-height: 100vh;
         }
         .header {
             display: flex;
@@ -89,11 +91,18 @@
         .hidden { 
             display: none; 
         }
+        .footer {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            color: #1DB954;
+            font-size: 1em;
+        }
     </style>
 </head>
 <body>
     <div class="header">
-        <h1>SpotyDownloaderByAreikusu</h1>
+        <h1>SpotyDownloader</h1>
         <img src="https://static.vecteezy.com/system/resources/previews/016/716/458/non_2x/spotify-icon-free-png.png" alt="Spotify Icon">
     </div>
     <form id="music-form">
@@ -106,6 +115,7 @@
         <h2 id="song-title"></h2>
         <a id="download-button" href="#" download>Descargar Canción</a>
     </div>
+    <div class="footer">ByAreikusu</div>
 
     <script>
         $(document).ready(function() {
