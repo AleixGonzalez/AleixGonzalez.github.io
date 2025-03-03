@@ -3,90 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Currículum de Aleix Gonzalez Simal</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Currículum Aleix Gonzalez</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .profile-pic { width: 180px; height: 180px; object-fit: cover; }
+        .section-title { color: #2c3e50; border-left: 4px solid #3498db; padding-left: 1rem; }
+        .skill-badge { background-color: #3498db!important; margin: 3px; }
+        .timeline { border-left: 3px solid #3498db; }
+    </style>
 </head>
-<body>
-    <div class="container">
-        <div class="sidebar">
-            <img src="foto.jpg" alt="Foto de Aleix Gonzalez Simal" class="foto-perfil">
-            <section id="contacto">
-                <h2>Contacto</h2>
-                <p>Carrer San Antoni nº31, 43716 Albinyana, España</p>
-                <p><a href="mailto:aleix18122005@gmail.com">aleix18122005@gmail.com</a></p>
-                <p>(+34) 656793050</p>
-            </section>
-            <section id="habilidades">
-                <h2>Habilidades Informáticas</h2>
-                <ul>
-                    <li>HTML</li>
-                    <li>Java</li>
-                    <li>CSS</li>
-                    <li>ERP Microsoft Dynamics</li>
-                    <li>ERP Microsoft NAV</li>
-                    <li>C/AL</li>
-                    <li>Python - Conocimientos básicos</li>
-                    <li>DataBase Sql Server</li>
-                    <li>Oracle-SQL</li>
-                    <li>Aplicaciones Arduino - Nivel básico</li>
-                    <li>Linux (Comandos de Terminal, Bash/Shell)</li>
-                    <li>Windows Server NT a 2010 R2</li>
-                </ul>
-            </section>
-            <section id="idiomas">
-                <h2>Idiomas</h2>
-                <p>Español, Catalán</p>
-                <p>Inglés - B1</p>
-            </section>
-        </div>
-        <div class="main-content">
-            <header>
-                <h1>Aleix Gonzalez Simal</h1>
-                <p>Fecha de nacimiento: 18/12/2005</p>
-                <p>Nacionalidad: Española</p>
-                <p>Dispongo de Vehículo Propio</p>
-            </header>
-            <section id="perfil">
-                <h2>Perfil</h2>
-                <p>Programador web con experiencia en el mantenimiento de atracciones acuáticas y equipos informáticos. Busco formar parte de un equipo de desarrollo donde pueda aplicar mis conocimientos en CSS y desarrollo web.</p>
-            </section>
-            <section id="experiencia">
-                <h2>Experiencia Laboral</h2>
-                <div>
-                    <h3>Aquatic Lifeguard Service SL.</h3>
-                    <p><em>24/06/2022 – 03/09/2023</em></p>
-                    <p>Les Peces, Albinyana, España</p>
-                    <p>Mantenimiento de atracciones acuáticas. Vigilancia y control de atracciones.</p>
+<body class="bg-light">
+    <div class="container py-4">
+        <div class="row g-4">
+            <!-- Sidebar -->
+            <div class="col-lg-4">
+                <div class="card shadow-sm">
+                    <div class="card-body text-center">
+                        <img src="foto.jpg" alt="Foto" class="profile-pic rounded-circle mb-3">
+                        <h1 class="h4">Aleix Gonzalez Simal</h1>
+                        <p class="text-muted">Desarrollador Web en formación</p>
+                    </div>
+
+                    <div class="card-body">
+                        <section class="mb-4">
+                            <h3 class="h5 section-title">Contacto</h3>
+                            <ul class="list-unstyled">
+                                <li class="mb-2">
+                                    <i class="fas fa-map-marker-alt me-2"></i>
+                                    C/ San Antoni 31<br>43716 Albinyana
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-envelope me-2"></i>
+                                    <a href="mailto:aleix18122005@gmail.com">aleix18122005@gmail.com</a>
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-phone me-2"></i>
+                                    (+34) 656 793 050
+                                </li>
+                                <li><i class="fas fa-car me-2"></i>Vehículo propio</li>
+                            </ul>
+                        </section>
+
+                        <section class="mb-4">
+                            <h3 class="h5 section-title">Habilidades Técnicas</h3>
+                            <div class="mb-3">
+                                <h4 class="h6">Desarrollo Web</h4>
+                                <span class="badge skill-badge">HTML5</span>
+                                <span class="badge skill-badge">CSS3</span>
+                                <span class="badge skill-badge">JavaScript</span>
+                                <span class="badge skill-badge">React</span>
+                                <span class="badge skill-badge">PHP</span>
+                                <span class="badge skill-badge">Laravel</span>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <h4 class="h6">Otros</h4>
+                                <span class="badge skill-badge">Java</span>
+                                <span class="badge skill-badge">Python</span>
+                                <span class="badge skill-badge">SQL</span>
+                                <span class="badge skill-badge">C/AL</span>
+                                <span class="badge skill-badge">ERP Dynamics</span>
+                                <span class="badge skill-badge">Arduino</span>
+                                <span class="badge skill-badge">Git</span>
+                                <span class="badge skill-badge">Linux</span>
+                                <span class="badge skill-badge">Windows Server</span>
+                            </div>
+                        </section>
+
+                        <section class="mb-4">
+                            <h3 class="h5 section-title">Idiomas</h3>
+                            <p class="mb-1">Español/Catalán: Nativo</p>
+                            <p>Inglés: Nivel B1</p>
+                        </section>
+                    </div>
                 </div>
-                <div>
-                    <h3>Becari RessetTecnic</h3>
-                    <p><em>09/11/2022 – 30/11/2023</em></p>
-                    <p>El Vendrell, España</p>
-                    <p>Mantenimiento de equipos informáticos. Mantenimiento web. Mantenimiento de software. Montaje de redes.</p>
+            </div>
+
+            <!-- Contenido Principal -->
+            <div class="col-lg-8">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <!-- Experiencia Laboral -->
+                        <section class="mb-5">
+                            <h2 class="h4 mb-4 section-title"><i class="fas fa-briefcase me-2"></i>Experiencia Laboral</h2>
+                            
+                            <div class="timeline ps-3">
+                                <!-- Nueva práctica -->
+                                <div class="mb-4 position-relative">
+                                    <h3 class="h5">Prácticas Desarrollo Web - RESSETTECNIC</h3>
+                                    <p class="text-muted small">15/09/2023 - 15/05/2024</p>
+                                    <ul class="list-unstyled">
+                                        <li><i class="fas fa-angle-right me-2"></i>Desarrollo full-stack con Laravel y React</li>
+                                        <li><i class="fas fa-angle-right me-2"></i>Creación de APIs REST</li>
+                                        <li><i class="fas fa-angle-right me-2"></i>Optimización de bases de datos SQL</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Experiencia anterior -->
+                                <div class="mb-4">
+                                    <h3 class="h5">Becario Técnico - RESSETTECNIC</h3>
+                                    <p class="text-muted small">09/11/2022 - 30/11/2023</p>
+                                    <ul class="list-unstyled">
+                                        <li><i class="fas fa-angle-right me-2"></i>Mantenimiento hardware/software</li>
+                                        <li><i class="fas fa-angle-right me-2"></i>Soporte técnico a usuarios</li>
+                                        <li><i class="fas fa-angle-right me-2"></i>Administración de redes</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Trabajo de socorrista -->
+                                <div class="mb-4">
+                                    <h3 class="h5">Socorrista - Aquatic Lifeguard Service SL</h3>
+                                    <p class="text-muted small">24/06/2022 - 03/09/2023</p>
+                                    <ul class="list-unstyled">
+                                        <li><i class="fas fa-angle-right me-2"></i>Vigilancia y seguridad acuática</li>
+                                        <li><i class="fas fa-angle-right me-2"></i>Mantenimiento de instalaciones</li>
+                                        <li><i class="fas fa-angle-right me-2"></i>Atención al público</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Formación -->
+                        <section class="mb-5">
+                            <h2 class="h4 mb-4 section-title"><i class="fas fa-graduation-cap me-2"></i>Formación</h2>
+                            
+                            <div class="timeline ps-3">
+                                <div class="mb-4">
+                                    <h3 class="h5">CFGS Desarrollo Aplicaciones Web</h3>
+                                    <p class="text-muted small">Institut Cami de Mar · 2023 - Actual</p>
+                                    <p>Tecnologías aprendidas: React, Laravel, Docker, APIs REST</p>
+                                </div>
+
+                                <div class="mb-4">
+                                    <h3 class="h5">Técnico Sistemas Microinformaticos y Redes</h3>
+                                    <p class="text-muted small">Institut Cami de Mar · 2021-2023</p>
+                                    <p>Redes, hardware y sistemas operativos</p>
+                                </div>
+
+                                <div class="mb-4">
+                                    <h3 class="h5">ESO</h3>
+                                    <p class="text-muted small">Institut Baix Penedés · 2016-2021</p>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
                 </div>
-            </section>
-            <section id="educacion">
-                <h2>Educación y Formación</h2>
-                <div>
-                    <h3>Institut Cami de Mar</h3>
-                    <p><em>11/09/2021 – 20/06/2023</em></p>
-                    <p>Calafell, España</p>
-                    <p>Técnico en Sistemas Microinformáticos y Redes</p>
-                </div>
-                <div>
-                    <h3>Institut Baix Penedés</h3>
-                    <p><em>10/09/2016 – 20/06/2021</em></p>
-                    <p>El Vendrell, España</p>
-                    <p>Certificado General de Secundaria</p>
-                </div>
-                <div>
-                    <h3>Instituto Secundario Cami de Mar</h3>
-                    <p><em>10/09/2023 – Actual</em></p>
-                    <p>Calafell, España</p>
-                    <p>Desarrollo de aplicaciones web / Administración de Sistemas Informáticos</p>
-                </div>
-            </section>
+            </div>
         </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
