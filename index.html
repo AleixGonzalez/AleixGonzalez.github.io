@@ -13,24 +13,9 @@
       .section-title { color: #2c3e50; border-left: 4px solid #3498db; padding-left: 1rem; }
       .skill-badge { background-color: #3498db!important; margin: 3px; }
       .timeline { border-left: 3px solid #3498db; }
-
-      /* Estilos solo para PDF/Impresión */
-      @media print {
-        #btnPrint { display: none; } /* ocultar el botón en el PDF */
-        body { background: white; }
-        .card { box-shadow: none !important; border: none !important; }
-      }
   </style>
 </head>
 <body>
-
-  <div class="container py-4" id="cv">
-    <div class="text-end mb-3">
-      <button class="btn btn-danger" id="btnPrint">
-        <i class="fas fa-file-pdf me-2"></i> Descargar PDF
-      </button>
-    </div>
-
     <div class="row g-4">
       <!-- Sidebar -->
       <div class="col-lg-4">
@@ -69,6 +54,7 @@
               <div class="mb-3">
                 <h4 class="h6">Otros</h4>
                 <span class="badge skill-badge">Java</span>
+                <span class="badge skill-badge">JavaSpring</span>
                 <span class="badge skill-badge">Python</span>
                 <span class="badge skill-badge">SQL</span>
                 <span class="badge skill-badge">Oracle</span>
@@ -101,12 +87,24 @@
               <h2 class="h4 mb-4 section-title"><i class="fas fa-briefcase me-2"></i>Experiencia Laboral</h2>
               <div class="timeline ps-3">
                 <div class="mb-4">
+                  <h3 class="h5">Desarrollo Web / Help Desk - RESSETTECNIC</h3>
+                  <p class="text-muted small">1/05/2024 - 30/08/2025</p>
+                  <ul class="list-unstyled">
+                    <li><i class="fas fa-angle-right me-2"></i>Desarrollo full-stack con Laravel, NodeJs, Tailwind y React</li>
+                    <li><i class="fas fa-angle-right me-2"></i>Creación de APIs REST</li>
+                    <li><i class="fas fa-angle-right me-2"></i>Optimización de bases de datos SQL</li>
+                    <li><i class="fas fa-angle-right me-2"></i>Help Desk, asistencia telematica o presencial</li>
+                    <li><i class="fas fa-angle-right me-2"></i>Optimización de bases de datos SQL</li>
+                  </ul>
+                </div>
+                <div class="mb-4">
                   <h3 class="h5">Prácticas Desarrollo Web - RESSETTECNIC</h3>
                   <p class="text-muted small">15/09/2024 - 15/02/2025</p>
                   <ul class="list-unstyled">
                     <li><i class="fas fa-angle-right me-2"></i>Desarrollo full-stack con Laravel, NodeJs, Tailwind y React</li>
                     <li><i class="fas fa-angle-right me-2"></i>Creación de APIs REST</li>
                     <li><i class="fas fa-angle-right me-2"></i>Optimización de bases de datos SQL</li>
+                    <li><i class="fas fa-angle-right me-2"></i>Help Desk, asistencia telematica o presencial</li>
                   </ul>
                 </div>
                 <div class="mb-4">
@@ -136,7 +134,7 @@
               <div class="timeline ps-3">
                 <div class="mb-4">
                   <h3 class="h5">CFGS Desarrollo Aplicaciones Web</h3>
-                  <p class="text-muted small">Institut Cami de Mar · 2023 - Actual</p>
+                  <p class="text-muted small">Institut Cami de Mar · 2023 - 2025</p>
                   <p>Tecnologías aprendidas: React, Laravel, Docker, APIs REST</p>
                 </div>
                 <div class="mb-4">
@@ -155,12 +153,5 @@
       </div>
     </div>
   </div>
-
-  <!-- js -->
-  <script>
-    document.getElementById("btnPrint").addEventListener("click", () => {
-      window.print();
-    });
-  </script>
 </body>
 </html>
